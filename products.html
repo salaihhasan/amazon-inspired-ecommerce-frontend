@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        
+        section{
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+        }
+
+        button{
+            color: black;
+            background-color: orange;
+            border: none;
+            padding: 16px;
+            border-radius: 10px;
+            margin: 0 0 1.3rem 1rem;
+            font-size: 17px;
+        }
+        span{ color: red;
+        }
+
+        figure{
+            text-align: center;
+            margin-top: 20%;
+        }
+
+        .content{
+            margin: 1.5rem 0 1.3rem 0;
+            font-size: 1.7rem;
+            width: 90%;
+            font-weight: 600;
+        }
+
+        .description{
+            font-family: arial;
+            font-weight: 550;
+            background-color: rgb(246, 246, 241);
+            padding: 1.2rem .8rem;
+            font-size: 1.1rem;
+            width: 95%;
+            margin-top: 1.5rem;
+        }
+
+        p{
+            margin: -10px 0px 30px 0px;
+        }
+
+        table{
+            width: 80%;
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        
+            
+    </style>
+</head>
+<body>
+    <header>
+        <div class="focus">
+            <img src="https://i.pinimg.com/736x/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.jpg" width="100px">
+        </div>
+        <div class="location focus">
+            <div>Deliver to <br> <b>India</b></div>
+        </div>
+        <div class="search-tab">
+            <input type="text" Placeholder="Search Amazon" >
+            <div><span class="bi bi-search" id="icon"></span></div>
+        </div>
+    
+        <div class="lang focus">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png" width="30px">
+            <!-- <span> ENG</span> -->
+             <select name="" id="lang">
+                <option value="lang">English</option>
+                <option value="Lang">Hindi</option>
+                <option value="Lang">French</option>
+                <option value="Lang">Russian</option>
+                <option value="Lang">Korean</option>
+             </select>
+        </div>
+        <div class="sign-in focus">
+            <div>Hello, <a style="color: white; cursor: pointer;text-decoration: none ;" href="registration.html">Sign in</a><br>
+            <b>Accounts and Lists </b></div>
+        </div>
+        <div class="focus"> 
+            <div>Returns <br> <b>& Orders</b></div>
+        </div>
+        <div class="cart focus">
+            <span class="bi bi-cart2" style="font-size: 33px;"></span>
+            <span><sub>cart</sub></span>
+        </div>
+    </header>
+    <section>
+        <figure>
+            <img align-item="center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3CgwJUzA-XlSFWMeobFt35ZDj_gluAng-zA&s" width="50%">
+            <figcaption align="center" style="margin-top: 1.5rem;">Amazon Basics Wall Charger</figcaption>
+        </figure>
+        <main>
+            <div class="content">Amazon Basics 36W Two-Port USB-C Wall Charger With Power Delivery PD For Tablets & Phones (iPhone 14 / 13 / 12 / 11 / X, iPad, Samsung), White (non-PPS), 2.34 in x 1.09 in x 2.21 in </div>
+            <div class="content" style="color: orange; font-size: 32px;">Rs 1,199</div>
+            <p style="font-size: larger;"><span>Available:</span> In Stock</p>
+            <a href="/amzn_cart.html">
+                <button>Add to Cart</button>
+            </a>
+            <br>
+            <div class="content" style="font-size: x-large;">
+                <h5>Description</h5>
+            </div>
+            <p class="description">A fast-charging standard that delivers higher levels of power over a USB-C connection. PD offers a high degree of flexibility in terms of power delivery,suitable for a wide range of devices. Its maximum power delivery of 240W is particularly beneficial for laptops and other power-hungry devices. QC focuses on delivering fast charging speeds primarily for Android devices. </p>
+            <table border="1" cellpadding="20">
+                <caption>Specifications</caption>
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <td>Amazon Basics</td>
+                        
+                    </tr>
+                    <tr>
+                        <th>Power Delivery</th>
+                        <td>240W</td>
+                    </tr>
+                    <tr>
+                        <th>Connector Type</th>
+                        <td>USB Type A</td>
+                    </tr>
+                    <tr>
+                        <th>Compatible Devices</th>
+                        <td>Smartphones</td>
+                    </tr>
+                    <tr>
+                        <th>Special Features</th>
+                        <td>4 port</td>
+                    </tr>
+                </thead>
+                
+            </table>
+        </main>
+    </section>
+</body>
+</html>

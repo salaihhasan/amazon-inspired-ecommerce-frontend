@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+
+        a{
+            text-decoration: none;
+            color: rgb(146, 96, 146);
+        }
+
+        body{
+            margin: 4% 5% 0 11%;
+        }
+
+        header{
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+        }
+
+        .name{
+            font-size: 2.2rem;
+            color:#ba6d08;
+
+        }
+
+        .thanks{
+            font-size: 1.4rem;
+            line-height: 33px;
+            color: rgb(63, 58, 58);
+        }
+
+        section{
+            /* display: flex;
+            justify-content: space-between; */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-top: 6px solid black;
+            padding: 1.85rem 1rem 1rem 2.1rem;
+            gap: 5%;
+            width: 90%;
+            background-color:#e7eced;
+        }
+
+        .address{
+            width: 90%;
+            margin: .8rem 0 0 0;
+            font-size: 1.6rem;
+            color: rgb(154, 154, 232);
+        }
+
+        .address-box{
+            /* width: 70%; */
+            margin-left: 1.5rem;
+        }
+
+        .delivery-date{
+            color: rgb(9, 145, 9);
+            font-size: 1.6rem;
+            font-weight: 570;
+        }
+
+        .prime{
+            font-size: 1.45rem;
+            font-weight: bolder;
+        }
+
+        .sub-prime{
+            color: #42b6e4;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 16px 0 13px;
+        }
+
+        .btn{
+            background-color:#f8c16e;
+            border-radius: 1.2rem;
+            padding: .9rem 1.4rem;
+            font-size: 1.9rem;
+            font-weight: 650px;
+            border: 1.5px solid black;
+            margin: 2rem 0 0 0;
+        }
+
+        .d-flex{
+             width: 90%;
+             padding: .8rem 1rem 2.9rem 2.1rem;
+        }
+
+        .total{
+            text-align: end;
+            margin-right: 15%;
+        }
+
+        .head{
+            text-align: end;
+        }
+
+
+        .product-details{
+            display: grid;
+            grid-template-columns: 2fr 5.5fr 2fr;
+            gap: 2%;
+            margin-top: 2rem;
+            padding: 0 2rem 0 0;
+        }
+
+        .product-descr{
+            margin-left: -1.5rem;
+            font-size: 1.5rem;
+            width: 95%;
+            color: rgb(89, 89, 139);
+        }
+
+        .fs-3{
+            margin-left: -1.5rem;
+            font-weight: 600;
+            font-family: system-ui, 'Segoe UI', Roboto,;
+        }  
+        
+        .sold{
+            margin-top: -1.1rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div><img src="https://vegapng.com/wp-content/uploads/2025/05/Amazon-Prime-Logo-Png-Image.png" width="90%"></div>
+        <div class="head">
+            <div>
+                <span class="fs-4">
+                    <span><a href="#">Your Orders </a></span>
+                    <span class="me-3 ms-3"> | </span>
+                    <span><a href="#"> Your Account </a></span>
+                    <span class="me-3 ms-3"> | </span>
+                    <span><a href="/index.html"> Amazon.in</a></span>
+                </span>
+                <hr>
+                <div>
+                    <div class="fw-bolder fs-2">Order Confirmation</div>
+                    <div class="thanks">Order #237-492-019304</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mt-5">
+        <div class="name">Hello Karthik S,</div>
+        <p class="thanks fs-4 pe-4">Thank You for your order. We'll send a confirmation When your order ships. Your estimated delivery date is indicated below. If you would like to view the status of Your order or make any changes to it, Please Visit <a href="#">Your Orders</a> on Amazon.in.</p>
+        <p class="thanks mb-4">Your Purchase has been divided into 3 orders</p>
+    </div>
+    <div>
+        <div class="name mt-3">Order Details</div>
+        <hr class="mt-0 mb-4"> 
+        <div class="thanks">Order #237-492-019304</div>
+        <div class="thanks">Placed on Tuesday, October 1, 2019</div>
+    </div>
+    <section class="mt-2">
+        <div>
+            <div class="thanks">Arriving:</div>
+            <div class="delivery-date">Thursday, October 12</div>
+            <div>
+                <div class="thanks mt-3">Your Shipping Speed: </div>
+                <div class="prime"><span class="sub-prime">prime</span>Two-days delivery at Rs. 80. FREE With Prime</div>
+                <button type="button" class="btn btn-lg">View or manage order</button>
+            </div>
+        </div>
+        <div class="address-box"> 
+            <div >
+                <div class="thanks">Your order will be sent to: </div>
+                <div class="delivery-date text-dark text-bold">Karthik srinivasan</div>
+            </div>
+            <p class="address">Netaji Subhash Marg, Lal Qila, Chandni Chowk, New Delhi, Delhi, 110006 </p>
+        </div>
+    </section>
+
+    <div class="product-details">
+            <div class="ms-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3CgwJUzA-XlSFWMeobFt35ZDj_gluAng-zA&s" width="70%">
+            </div>
+            <div class="product-descr">
+                <p>Amazon Basics 36W Two-Port USB-C Wall Charger With Power Delivery PD For Tablets & Phones (iPhone 14 / 13 / 12 / 11 / X, iPad, Samsung), White (non-PPS), 2.34 in x 1.09 in x 2.21 in </p>
+                <p class="sold"> <span class="text-danger">Sold By:</span> Amazon.com services LLC</p>
+                <p class="sold">Fulfilled by Amazon</p>
+            </div>
+                    
+            <div>
+                <div class="fs-3">
+                    Rs 1,199.00
+                </div>
+            </div>
+                    
+    </div>
+
+    <hr>
+    <div>
+        <div class="d-flex justify-content-end">
+            <div class="total">
+                <div class="thanks">Item Subtotal: </div>
+                <div class="thanks">Shipping & Handling: </div>
+                <div class="thanks mt-3 fw-bold">Order Total: </div>
+            </div>
+            <div>
+                <div class="thanks">Rs. 1,199.00</div>
+                <div class="thanks">Rs. 60.00 </div>
+                <div class="thanks mt-3 fw-bold">Rs. 1,259</div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

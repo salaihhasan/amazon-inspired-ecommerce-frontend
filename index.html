@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .focus:hover{
+            cursor: pointer;
+            border: 1px solid white;
+        }
+
+        header{
+            background-color: #131920;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            align-items: center;
+            font-size: 15px;
+            height: 40px;
+        }
+
+        .search-tab{
+            width: 45%;
+            height: 70%;
+            display: flex;
+            box-sizing: border-box;
+            align-items: center;
+        }
+
+        input{
+            width: 100%;
+            height: 35px;
+            border-radius: 8px 0 0 8px;
+            padding-left: 20px;
+        }
+
+        select{
+            padding: 3px;
+        }
+
+        #icon{
+           font-size: 22px;
+           padding: 6.8px;
+           border-radius: 0 6px 6px 0;
+           color: black;
+           background-color: #fdbd68;
+        }
+
+        .cart{
+            font-size: 22px;
+        }
+
+        body{
+            background-color: #d681ff;
+        }
+
+        section{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 35px;
+            width: 98%;
+            margin: -280px 100px 0px 10px;
+           
+            
+        }
+
+        .section2{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 35px;
+            width: 98%;
+            margin: 20px 100px 0px 10px;
+            
+        }
+
+       
+        .Card{
+            background-color: white;
+            width: 100%;
+            padding: 10px;
+           height:420px;
+           border: 1px solid black;
+            
+        }
+        
+        .card-header{
+            font-size: 19px;
+            font-weight: bolder;
+            margin-left: 8px;
+        }
+
+        .card-body{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            margin-bottom: 30px;
+            margin-top: 18px;    
+        }
+
+        .card-footer{
+            color: #306fa9;
+            margin-left: 8px;
+        }
+        .row{
+            margin: auto;
+        }
+
+        .card-body .row p{
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .card-footer p{
+            align-items: baseline;
+        }
+
+
+        .section3{
+            margin: 20px 100px 0px 10px;
+            background-color: white;
+            padding: 12px;
+        }
+
+        main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 20px;
+            width: 100%;
+        }
+
+        .image{
+            /* border: 1px solid black; */
+            padding: 5px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+        }
+
+        .section-head{
+            margin-bottom: 20px;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .block span{
+            background-color: #d20339;
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="focus">
+            <img src="https://i.pinimg.com/736x/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.jpg" width="100px">
+        </div>
+        <div class="location focus">
+            <div>Deliver to <br> <b>India</b></div>
+        </div>
+        <div class="search-tab">
+            <input type="text" Placeholder="Search Amazon" >
+            <div><span class="bi bi-search" id="icon"></span></div>
+        </div>
+    
+        <div class="lang focus">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png" width="30px">
+            <!-- <span> ENG</span> -->
+             <select name="" id="lang">
+                <option value="lang">English</option>
+                <option value="Lang">Hindi</option>
+                <option value="Lang">French</option>
+                <option value="Lang">Russian</option>
+                <option value="Lang">Korean</option>
+             </select>
+        </div>
+        <div class="sign-in focus">
+            <div>Hello, <a style="color: white; cursor: pointer;text-decoration: none ;" href="registration.html">Sign in</a><br>
+            <b>Accounts and Lists </b></div>
+        </div>
+        <div class="focus"> 
+            <div>Returns <br> <b>& Orders</b></div>
+        </div>
+        <div class="cart focus">
+            <span class="bi bi-cart2" style="font-size: 33px;"></span>
+            <span><sub>cart</sub></span>
+        </div>
+    </header>
+    <div class="header">
+        <img src="https://m.media-amazon.com/images/I/619geyiQI5L._SX3000_.jpg" width="100%">
+    </div>
+    <section>
+        <div class="Card">
+            <div class="card-header">
+                <div>Shop Fashion for Less</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <a href="products.html">
+                    <div class="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3CgwJUzA-XlSFWMeobFt35ZDj_gluAng-zA&s" width="130px" height="120px">
+                        <p>Electronics Under 2k</p>
+                    </div>
+                    </a>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_TOPS_2x._SY232_CB623353881_.jpg" width="140px" height="120px">
+                        <p>Top Under $25</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_DRESSES_2x._SY232_CB623353881_.jpg" width="140px" height="120px">
+                        <p>Dresses under $30</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_SHOES_2x._SY232_CB624172947_.jpg" width="140px" height="120px">
+                        <p>Shoes under $50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>See all details</div>
+            </div>
+        </div>
+
+         <div class="Card">
+            <div class="card-header">
+                <div>Shop for your home essentials</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/CleaningTool_2x._SY232_CB563137408_.jpg" width="140px" height="120px">
+                        <p>Cleaning Tools</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeStorage_2x._SY232_CB563137408_.jpg" width="140px" height="120px" >
+                        <p>Home Storage</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeDecor_2x._SY232_CB563137408_.jpg" width="140px" height="120px">
+                        <p>Home Decor</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/Bedding_2x._SY232_CB563137408_.jpg" width="140px" height="120px">
+                        <p>Bedding</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>See all details</div>
+            </div>
+        </div>
+
+         <div class="Card">
+            <div class="card-header">
+                <div>New home arrivals under $50</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_315_HP_NewArrivals_QuadCard_D_01_2x._SY232_CB555960040_.jpg" width="140px" height="120px">
+                        <p>Kitchen & Dinning</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_316_HP_NewArrivals_QuadCard_D_02_2x._SY232_CB555960040_.jpg" width="140px" height="120px">
+                        <p>Home Improvement</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_317_HP_NewArrivals_QuadCard_D_03_2x._SY232_CB555960040_.jpg" width="140px" height="120px">
+                        <p>Decor</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_318_HP_NewArrivals_QuadCard_D_04_2x._SY232_CB555960040_.jpg" width="140px" height="120px">
+                        <p>Bedding and bath</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>See all details</div>
+            </div>
+        </div>
+
+         <div class="Card">
+            <div class="card-header">
+                <div>Fashion trends you like</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_2_x2._SY232_CB595261253_.jpg" width="140px" height="120px">
+                        <p>Dresses</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_3_x2._SY232_CB595261253_.jpg" width="140px" height="120px">
+                        <p>Knits</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_1_x2._SY232_CB595261253_.jpg" width="140px" height="120px">
+                        <p>Jackets</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_4_x2._SY232_CB595261253_.jpg" width="140px" height="120px">
+                        <p>Jewellery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>See all details</div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section3">
+        <div>
+            <div class="section-head">Top deals with exchange | Up to ₹74,000 off</div>
+            <main>
+                <div class="block">
+                    <div class="image"><img src="https://m.media-amazon.com/images/I/31KxpX7Xk7L._SR480,440_.jpg" width="260px"></div>
+                    <p><span>35% off</span> Great India Festival <br> <br> <b>Rs 49,999</b> <del>Rs 69,900.00</del> <br> <br> Apple iphone 15(128GB) - Black </p> 
+                </div>
+                <div class="block">
+                    <div class="image"><img src="https://m.media-amazon.com/images/I/41hyMMjlg2L._SR480,440_.jpg" width="260px"></div>
+                    <p><span>34% off</span> Great India Festival <br> <br> <b>Rs 9,898</b> <del>Rs 14,999.00</del> <br> <br> realme NARZO 80 Lite 5G </p> 
+                </div>
+                <div class="block">
+                    <div class="image"><img src="https://m.media-amazon.com/images/I/4146uuCQ1UL._SR480,440_.jpg" width="260px"></div>
+                    <p><span>17% off</span> Great India Festival <br> <br> <b>Rs 33,989</b> <del>Rs 40,999.00</del> <br> <br> iQOO Neo 10</p> 
+                </div>
+                <div class="block">
+                    <div class="image"><img src="https://m.media-amazon.com/images/I/41VYRSjxUoL._SR480,440_.jpg" width="260px"></div>
+                    <p><span>26% off</span> Great India Festival <br> <br> <b>Rs 12,989</b> <del>Rs 17,499.00</del> <br> <br> iQOO Z10x 5G</p> 
+                </div>
+                <div class="block">
+                    <div class="image"><img src="https://m.media-amazon.com/images/I/41Qih-v5NQL._SR480,440_.jpg" width="260px"></div>
+                    <p><span>09% off</span> Great India Festival <br> <br> <b>Rs 31,898</b> <del>Rs 34,999.00</del> <br> <br> OnePlus Nord 5 | snapdragon 8 Gen...... </p> 
+                </div>
+                
+            </main>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="Card">
+            <div class="card-header">
+                <div>Shop Fashion for Less</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="">
+                        <a href="https://www.amazon.com/s?k=Jeans&rh=n%3A1040660%2Cn%3A1048188%2Cp_36%3A-5000&dc&ds=v1%3AZrh2YeJ%2Bmo6tc5p1QJD9idnCpBDTF2pKNTUbGqlhFKk&_encoding=UTF8&content-id=amzn1.sym.1cb3993a-41fc-4a2a-b2ee-016e70298d9f&crid=1TZCO6ZC2HZVA&pd_rd_r=6c62c2c7-3a8a-4bf0-b8e4-039cb9580077&pd_rd_w=T13pr&pd_rd_wg=uYOV9&pf_rd_p=1cb3993a-41fc-4a2a-b2ee-016e70298d9f&pf_rd_r=GRNJE9KYEHASVPT8G5ZK&qid=1684823801&rnid=2941120011&sprefix=jeans%2Caps%2C155&ref=pd_hp_d_atf_unk">
+                            <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_BOTTOMS_2x._SY232_CB624172947_.jpg" width="140px" height="120px">
+                        </a>
+                        <p>Jeans under $50</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_TOPS_2x._SY232_CB623353881_.jpg" width="140px" height="120px">
+                        <p>Top Under $25</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_DRESSES_2x._SY232_CB623353881_.jpg" width="140px" height="120px">
+                        <p>Dresses under $30</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_SHOES_2x._SY232_CB624172947_.jpg" width="140px" height="120px">
+                        <p>Shoes under $50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>See all details</div>
+            </div>
+        </div>
+
+         <div class="Card">
+            <div class="card-header">
+                <div>Shop for your home essentials</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/CleaningTool_2x._SY232_CB563137408_.jpg" width="140px" height="120px">
+                        <p>Cleaning Tools</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeStorage_2x._SY232_CB563137408_.jpg" width="140px" height="120px" >
+                        <p>Home Storage</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeDecor_2x._SY232_CB563137408_.jpg" width="140px" height="120px">
+                        <p>Home Decor</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/Bedding_2x._SY232_CB563137408_.jpg" width="140px" height="120px">
+                        <p>Bedding</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>See all details</div>
+            </div>
+        </div>
+
+         <div class="Card">
+            <div class="card-header">
+                <div>New home arrivals under $50</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_315_HP_NewArrivals_QuadCard_D_01_2x._SY232_CB555960040_.jpg" width="140px" height="120px">
+                        <p>Kitchen & Dinning</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_316_HP_NewArrivals_QuadCard_D_02_2x._SY232_CB555960040_.jpg" width="140px" height="120px">
+                        <p>Home Improvement</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_317_HP_NewArrivals_QuadCard_D_03_2x._SY232_CB555960040_.jpg" width="140px" height="120px">
+                        <p>Decor</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_318_HP_NewArrivals_QuadCard_D_04_2x._SY232_CB555960040_.jpg" width="140px" height="120px">
+                        <p>Bedding and bath</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>See all details</div>
+            </div>
+        </div>
+
+         <div class="Card">
+            <div class="card-header">
+                <div>Fashion trends you like</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_2_x2._SY232_CB595261253_.jpg" width="140px" height="120px">
+                        <p>Dresses</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_3_x2._SY232_CB595261253_.jpg" width="140px" height="120px">
+                        <p>Knits</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_1_x2._SY232_CB595261253_.jpg" width="140px" height="120px">
+                        <p>Jackets</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_4_x2._SY232_CB595261253_.jpg" width="140px" height="120px">
+                        <p>Jewellery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>See all details</div>
+            </div>
+        </div>
+
+    </section>
+    <section class="section2">
+        <div class="Card">
+            <div class="card-header">
+                <div>Shop Fashion for Less</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="">
+                        <a href="https://www.amazon.com/s?k=Jeans&rh=n%3A1040660%2Cn%3A1048188%2Cp_36%3A-5000&dc&ds=v1%3AZrh2YeJ%2Bmo6tc5p1QJD9idnCpBDTF2pKNTUbGqlhFKk&_encoding=UTF8&content-id=amzn1.sym.1cb3993a-41fc-4a2a-b2ee-016e70298d9f&crid=1TZCO6ZC2HZVA&pd_rd_r=6c62c2c7-3a8a-4bf0-b8e4-039cb9580077&pd_rd_w=T13pr&pd_rd_wg=uYOV9&pf_rd_p=1cb3993a-41fc-4a2a-b2ee-016e70298d9f&pf_rd_r=GRNJE9KYEHASVPT8G5ZK&qid=1684823801&rnid=2941120011&sprefix=jeans%2Caps%2C155&ref=pd_hp_d_atf_unk">
+                            <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_BOTTOMS_2x._SY232_CB624172947_.jpg" width="140px" height="120px">
+                        </a>
+                        <p>Jeans under $50</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_TOPS_2x._SY232_CB623353881_.jpg" width="140px" height="120px">
+                        <p>Top Under $25</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_DRESSES_2x._SY232_CB623353881_.jpg" width="140px" height="120px">
+                        <p>Dresses under $30</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_SHOES_2x._SY232_CB624172947_.jpg" width="140px" height="120px">
+                        <p>Shoes under $50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>See all details</div>
+            </div>
+        </div>
+
+         <div class="Card">
+            <div class="card-header">
+                <div>Shop for your home essentials</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/CleaningTool_2x._SY232_CB563137408_.jpg" width="140px" height="120px">
+                        <p>Cleaning Tools</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeStorage_2x._SY232_CB563137408_.jpg" width="140px" height="120px" >
+                        <p>Home Storage</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeDecor_2x._SY232_CB563137408_.jpg" width="140px" height="120px">
+                        <p>Home Decor</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/Bedding_2x._SY232_CB563137408_.jpg" width="140px" height="120px">
+                        <p>Bedding</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>See all details</div>
+            </div>
+        </div>
+
+         <div class="Card">
+            <div class="card-header">
+                <div>New home arrivals under $50</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_315_HP_NewArrivals_QuadCard_D_01_2x._SY232_CB555960040_.jpg" width="140px" height="120px">
+                        <p>Kitchen & Dinning</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_316_HP_NewArrivals_QuadCard_D_02_2x._SY232_CB555960040_.jpg" width="140px" height="120px">
+                        <p>Home Improvement</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_317_HP_NewArrivals_QuadCard_D_03_2x._SY232_CB555960040_.jpg" width="140px" height="120px">
+                        <p>Decor</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/HomeLifestyle/HomeSummerFlip/Homepage/QuadCards/Home_Flip_Summer_2024_318_HP_NewArrivals_QuadCard_D_04_2x._SY232_CB555960040_.jpg" width="140px" height="120px">
+                        <p>Bedding and bath</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>See all details</div>
+            </div>
+        </div>
+
+         <div class="Card">
+            <div class="card-header">
+                <div>Fashion trends you like</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_2_x2._SY232_CB595261253_.jpg" width="140px" height="120px">
+                        <p>Dresses</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_3_x2._SY232_CB595261253_.jpg" width="140px" height="120px">
+                        <p>Knits</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_1_x2._SY232_CB595261253_.jpg" width="140px" height="120px">
+                        <p>Jackets</p>
+                    </div>
+                    <div>
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_4_x2._SY232_CB595261253_.jpg" width="140px" height="120px">
+                        <p>Jewellery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>See all details</div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section3">
+        <div>
+            <div class="section-head">Top deals with exchange | Up to ₹74,000 off</div>
+            <main>
+                <div class="block">
+                    <div class="image"><img src="https://m.media-amazon.com/images/I/31KxpX7Xk7L._SR480,440_.jpg" width="260px"></div>
+                    <p><span>35% off</span> Great India Festival <br> <br> <b>Rs 49,999</b> <del>Rs 69,900.00</del> <br> <br> Apple iphone 15(128GB) - Black </p> 
+                </div>
+                <div class="block">
+                    <div class="image"><img src="https://m.media-amazon.com/images/I/41hyMMjlg2L._SR480,440_.jpg" width="260px"></div>
+                    <p><span>34% off</span> Great India Festival <br> <br> <b>Rs 9,898</b> <del>Rs 14,999.00</del> <br> <br> realme NARZO 80 Lite 5G </p> 
+                </div>
+                <div class="block">
+                    <div class="image"><img src="https://m.media-amazon.com/images/I/4146uuCQ1UL._SR480,440_.jpg" width="260px"></div>
+                    <p><span>17% off</span> Great India Festival <br> <br> <b>Rs 33,989</b> <del>Rs 40,999.00</del> <br> <br> iQOO Neo 10</p> 
+                </div>
+                <div class="block">
+                    <div class="image"><img src="https://m.media-amazon.com/images/I/41VYRSjxUoL._SR480,440_.jpg" width="260px"></div>
+                    <p><span>26% off</span> Great India Festival <br> <br> <b>Rs 12,989</b> <del>Rs 17,499.00</del> <br> <br> iQOO Z10x 5G</p> 
+                </div>
+                <div class="block">
+                    <div class="image"><img src="https://m.media-amazon.com/images/I/41Qih-v5NQL._SR480,440_.jpg" width="260px"></div>
+                    <p><span>09% off</span> Great India Festival <br> <br> <b>Rs 31,898</b> <del>Rs 34,999.00</del> <br> <br> OnePlus Nord 5 | snapdragon 8 Gen...... </p> 
+                </div>
+                
+            </main>
+        </div>
+    </section>
+    
+</body>
+</html>
