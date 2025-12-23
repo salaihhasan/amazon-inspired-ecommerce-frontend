@@ -57,6 +57,9 @@ build a structured, scalable frontend system similar to production-level website
 
 ## 📂 Folder Structure
 
+## 🚀 Live Demo
+https://salaihhasan.github.io/amazon-inspired-ecommerce-frontend/
+
 ```text
 amazon-inspired-ecommerce-frontend/
 │── index.html
