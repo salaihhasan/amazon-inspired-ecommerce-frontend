@@ -1,3 +1,6 @@
+## 🚀 Live Demo
+https://salaihhasan.github.io/amazon-inspired-ecommerce-frontend/
+
 # Amazon-Inspired E-commerce Frontend
 
 A complete multi-page e-commerce frontend application inspired by Amazon’s user experience.
@@ -56,9 +59,6 @@ build a structured, scalable frontend system similar to production-level website
 
 
 ## 📂 Folder Structure
-
-## 🚀 Live Demo
-https://salaihhasan.github.io/amazon-inspired-ecommerce-frontend/
 
 ```text
 amazon-inspired-ecommerce-frontend/
